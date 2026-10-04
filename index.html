@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MK Graphics | Graphic Designer & Video Editor</title>
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #171717;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    min-height: 90vh;
+    background: #111;
+    color: white;
+    padding: 25px 7% 70px;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f5b82e;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid #777;
+
+    padding: 10px 20px;
+
+    border-radius: 30px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    max-width: 1200px;
+    margin: 80px auto 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+    align-items: center;
+}
+
+.small-title {
+    color: #f5b82e;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #f5b82e;
+}
+
+.hero-text > p:not(.small-title) {
+    color: #ccc;
+
+    font-size: 18px;
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+
+    background: #f5b82e;
+
+    color: #111;
+
+    text-decoration: none;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 90px 7%;
+}
+
+h2 {
+    font-size: 40px;
+
+    margin-bottom: 35px;
+}
+
+.service-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.service-card img {
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 24px;
+
+    margin: 20px 25px 10px;
+}
+
+.service-card p {
+    color: #666;
+
+    margin: 0 25px 25px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 7% 90px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+}
+
+.form-container {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.description {
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-top: 18px;
+
+    margin-bottom: 7px;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #f5b82e;
+}
+
+
+/* GENDER */
+
+.gender {
+    display: flex;
+
+    gap: 15px;
+}
+
+.gender label {
+    border: 1px solid #ddd;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin: 0;
+}
+
+.gender input {
+    width: auto;
+}
+
+
+/* BUTTON */
+
+button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #f5b82e;
+
+    color: #111;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e4a91f;
+}
+
+
+/* =========================
+   CONTACT IMAGE
+========================= */
+
+.contact-image {
+    position: relative;
+
+    min-height: 600px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+.image-text {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    background: rgba(0,0,0,0.75);
+
+    color: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+}
+
+.image-text h3 {
+    color: #f5b82e;
+
+    font-size: 23px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111;
+
+    color: #aaa;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        margin-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contact-image {
+        min-height: 450px;
+    }
+
+    .form-container {
+        padding: 28px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav>
+
+    <div class="logo">
+        MK <span>GRAPHICS</span>
+    </div>
+
+    <a href="#contact" class="nav-button">
+        Contact Me
+    </a>
+
+</nav>
+
+
+<div class="hero">
+
+    <div class="hero-text">
+
+        <p class="small-title">
+            GRAPHIC DESIGN • VIDEO EDITING
+        </p>
+
+        <h1>
+            Bringing Your
+            <span>Ideas</span>
+            To Life
+        </h1>
+
+        <p>
+            Professional graphic design and video editing
+            for businesses, churches, events, brands and
+            personal projects.
+        </p>
+
+        <a href="#contact" class="main-button">
+            Work With Me
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85"
+        alt="Graphic design workspace">
+
+    </div>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services">
+
+<p class="small-title">
+    MY SERVICES
+</p>
+
+<h2>
+    What I Do
+</h2>
+
+
+<div class="service-container">
+
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=85"
+alt="Graphic Design">
+
+<h3>
+    Graphic Design
+</h3>
+
+<p>
+    Flyers, posters, social media designs,
+    banners, church designs, branding and more.
+</p>
+
+</div>
+
+
+
+<div class="service-card">
+
+<img
+src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=85"
+alt="Video Editing">
+
+<h3>
+    Video Editing
+</h3>
+
+<p>
+    Professional video editing for events,
+    advertisements, social media and promotions.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT FORM
+========================= -->
+
+<section id="contact" class="contact">
+
+
+<div class="form-container">
+
+<p class="small-title">
+    LET'S WORK TOGETHER
+</p>
+
+<h2>
+    Send Me Your Information
+</h2>
+
+<p class="description">
+    Fill in the information below and send your
+    request directly to my WhatsApp.
+</p>
+
+
+<form id="contactForm">
+
+
+<!-- NAME -->
+
+<label for="name">
+    Full Name
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+
+
+<!-- GENDER -->
+
+<label>
+    Gender
+</label>
+
+<div class="gender">
+
+<label>
+
+<input
+type="radio"
+name="gender"
+value="Male"
+required>
+
+Male
+
+</label>
+
+
+<label>
+
+<input
+type="radio"
+name="gender"
+value="Female">
+
+Female
+
+</label>
+
+</div>
+
+
+
+<!-- DATE -->
+
+<label for="date">
+    Date
+</label>
+
+<input
+type="date"
+id="date"
+required>
+
+
+
+<!-- LOCATION -->
+
+<label for="location">
+    Location
+</label>
+
+<input
+type="text"
+id="location"
+placeholder="Example: Kumasi, Ghana"
+required>
+
+
+
+<!-- MESSAGE -->
+
+<label for="message">
+    Message
+</label>
+
+<textarea
+id="message"
+rows="6"
+placeholder="Write your message here..."
+required>
+</textarea>
+
+
+
+<!-- SUBMIT -->
+
+<button type="submit">
+    Send To WhatsApp →
+</button>
+
+
+</form>
+
+</div>
+
+
+
+<!-- IMAGE -->
+
+<div class="contact-image">
+
+<img
+src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85"
+alt="Designer working">
+
+
+<div class="image-text">
+
+<h3>
+    MK GRAPHICS
+</h3>
+
+<p>
+    Graphic Designer & Video Editor
+</p>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© <span id="year"></span>
+MK Graphics. All Rights Reserved.
+</p>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   CURRENT DATE
+========================= */
+
+const today = new Date();
+
+const year = today.getFullYear();
+
+const month =
+String(today.getMonth() + 1).padStart(2, "0");
+
+const day =
+String(today.getDate()).padStart(2, "0");
+
+
+document.getElementById("date").value =
+`${year}-${month}-${day}`;
+
+
+document.getElementById("year").textContent =
+year;
+
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById("name").value.trim();
+
+
+    const gender =
+    document.querySelector(
+        'input[name="gender"]:checked'
+    ).value;
+
+
+    const date =
+    document.getElementById("date").value;
+
+
+    const location =
+    document.getElementById("location").value.trim();
+
+
+    const message =
+    document.getElementById("message").value.trim();
+
+
+    /* Format date */
+
+    const selectedDate =
+    new Date(date + "T00:00:00");
+
+
+    const formattedDate =
+    selectedDate.toLocaleDateString(
+        "en-GH",
+        {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }
+    );
+
+
+    /* YOUR WHATSAPP NUMBER */
+
+    const whatsappNumber =
+    "233552917047";
+
+
+    /* MESSAGE */
+
+    const whatsappMessage =
+
+`Hello MK Graphics,
+
+I am contacting you through your website.
+
+Name: ${name}
+
+Gender: ${gender}
+
+Date: ${formattedDate}
+
+Location: ${location}
+
+Message:
+${message}`;
+
+
+    /* WHATSAPP LINK */
+
+    const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(whatsappMessage);
+
+
+    /* OPEN WHATSAPP */
+
+    window.location.href =
+    whatsappURL;
+
+});
+
+</script>
+
+
+</body>
+</html>
